@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HackerNotes</string>
+
+    <!--titleBar设置-->
+    <string name="title_name">HackerNotes</string>
+    <string name="title_setting">更多</string>
+    <string name="title_back">返回</string>
+
+    <string name="newnoteactivity_content">请输入笔记内容...</string>
+</resources>

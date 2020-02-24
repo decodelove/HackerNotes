@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/et_write_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入笔记内容"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_save_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="保存"/>
+        <Button
+            android:id="@+id/btn_load_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="加载数据"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_update_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="修改笔记"/>
+            <EditText
+                android:id="@+id/et_updateid_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="请输入修改笔记id"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_delete_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="删除"/>
+            <EditText
+                android:id="@+id/et_deleteid_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="请输入删除笔记id"/>
+        </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_show_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#f00"
+        android:dividerHeight="1sp"
+        android:headerDividersEnabled="false"/>
+    </LinearLayout>
+
+</RelativeLayout>
