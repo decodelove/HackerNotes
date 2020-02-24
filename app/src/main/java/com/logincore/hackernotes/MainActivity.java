@@ -23,12 +23,13 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private ListView listView;
     private ImageView addNotes;
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
     private NotesAdapter notesAdapter;
 
     @Override
@@ -76,7 +77,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 //                return true;
 //            }
 //        });
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {   //长按删除
+/*        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {   //长按删除
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
                 new AlertDialog.Builder(MainActivity.this)
@@ -98,7 +99,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                         .show();
                 return true;
             }
-        });
+        });*/
     }
 
     @Override
@@ -108,10 +109,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.main_add_note:
-                addNewOneNotes();
-                break;
+        if (R.id.main_add_note == v.getId()){
+            addNewOneNotes();
         }
     }
 

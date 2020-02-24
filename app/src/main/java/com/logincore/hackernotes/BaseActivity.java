@@ -9,7 +9,7 @@ import com.logincore.hackernotes.utils.SysUtil;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
-    public UtilsDataHelper utilsDataHelper;
+    public static UtilsDataHelper utilsDataHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
